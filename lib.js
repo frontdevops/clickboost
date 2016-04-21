@@ -6,10 +6,7 @@ document.addEventListener('mousedown', function(e){
 
 Element.prototype.on = Element.prototype.addEventListener;
 
-Element.prototype.addEventListener = function(a, f, b) {
-  if (a == 'click'){
-  	return this._click = f;
-	}
-
-  return this.on(a, f, b);
+Element.prototype.addEventListener = function(action, func, bubling) {
+    if (action == 'click') return this._click = f;
+    return this.on(action, func, bubling);
 };
